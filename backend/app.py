@@ -9,7 +9,7 @@ load_dotenv()
 app = Flask(__name__, static_folder="../frontend/build", static_url_path="")
 
 # Allow only React dev server origin
-CORS(app, resources={r"/*": {"origins": "tesce.pesapal.com:9000"}})
+CORS(app, resources={r"/*": {"origins": "https://tesce.pesapal.com:9000"}})
 
 PESAPAL_API_URL = "https://bbi.pesapal.com/api"
 CLIENT_ID = os.getenv("PESAPAL_CLIENT_ID")
